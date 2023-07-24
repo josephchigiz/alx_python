@@ -93,3 +93,6 @@ For example:
 ````
 <br>
 These are a few of the key concepts needed when getting started in learning Python.
+
+___  
+**Happy Coding!** 🫡
