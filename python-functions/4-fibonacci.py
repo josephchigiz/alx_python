@@ -6,3 +6,5 @@ def fibonacci_sequence(n):
     f_list.append(a)
     a, b = b, a+b
   return f_list
+
+print(fibonacci_sequence(4200))
