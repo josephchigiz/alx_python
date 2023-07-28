@@ -54,14 +54,14 @@
 #*Writing a function that returns a list of 
 # numbers instead of printing them.abs
 
-def fib2(n):
-  """Return a list containing the Fibonacci series upto n"""
-  result = []
-  a, b = 0, 1
-  while a < n:
-    result.append(a)
-    a, b = b, a+b
-  return result
+# def fib2(n):
+#   """Return a list containing the Fibonacci series upto n"""
+#   result = []
+#   a, b = 0, 1
+#   while a < n:
+#     result.append(a)
+#     a, b = b, a+b
+#   return result
 
-f300 = fib2(300)         #call it
-print(f300)                     #write the result
+# f300 = fib2(300)         #call it
+# print(f300)                     #write the result
