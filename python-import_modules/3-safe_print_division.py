@@ -1,10 +1,13 @@
 def safe_print_division(a, b):
   
+  result = None
+  
   try:
     result = a / b
-    return print("Inside result: {}".format(result))
-  except (ZeroDivisionError, RecursionError):
-    return None
+  except ZeroDivisionError:
+    pass
   finally:
-    return result
+    print("Inside result: {}".format(result))
+    
+  return result
   
