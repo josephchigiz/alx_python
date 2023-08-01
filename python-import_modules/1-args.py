@@ -9,7 +9,7 @@ def listArgs():
   elif no_arg > 1:
     print("{} arguments:".format(no_arg))
   else:
-    print("O arguments.")
+    print("0 arguments.")
     
   for num, arg in enumerate(ls_arg, start=1):
     print("{}: {}".format(num, arg))
