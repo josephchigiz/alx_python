@@ -1,12 +1,10 @@
 def safe_print_division(a, b):
   
-  division = a / b
-  
   try:
-    print("Inside result: {}".format(division))
-  except ZeroDivisionError:
-    print("None")
+    result = a / b
+    return print("Inside result: {}".format(result))
+  except (ZeroDivisionError, RecursionError):
+    return None
   finally:
-    return print(safe_print_division(a, b))
+    return result
   
-safe_print_division(a,b)
