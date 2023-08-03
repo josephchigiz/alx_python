@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
-no_c = __import__('0-no_c').no_c
+#!/usr/bin/python3
+multiple_returns = __import__('2-multiple_returns').multiple_returns
 
-print(no_c("Holberton School"))
-print(no_c("Chicago"))
-print(no_c("C is fun!"))
+sentence = "At Holberton school, I learnt C!"
+length, first = multiple_returns(sentence)
+print("Length: {:d} - First character: {}".format(length, first))
