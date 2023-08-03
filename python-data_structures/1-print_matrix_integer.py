@@ -10,4 +10,5 @@ def print_matrix_integer(matrix=[[]]):
                 print("{:d}".format(row[k]))
             
     if not matrix:
-        return print()
+        print()
+        return
