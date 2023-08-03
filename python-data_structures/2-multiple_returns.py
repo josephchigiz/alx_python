@@ -9,6 +9,7 @@ def multiple_returns(sentence):
     return result
   else:
     first = None
+    length = 0
     result = (length, first) 
     return result
   
