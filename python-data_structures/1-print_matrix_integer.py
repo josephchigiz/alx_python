@@ -1,6 +1,6 @@
 def print_matrix_integer(matrix=[[]]):
     if not matrix:
-        print()
+        print(end="\n")
         return
     
     for row in matrix:
