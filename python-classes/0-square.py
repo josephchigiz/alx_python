@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 
 class Square:
-  """This is the size class"""
-  def __size(self, size=0):
-    """This is the size module"""
+  """This class represents a square"""
+  def __init__(self, size):
+    """Initialize the square with the given size
+    Args:
+      size: Size of the square"""
     self.size = size
-
-def main()
-
-main()
