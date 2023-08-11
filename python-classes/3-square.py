@@ -16,9 +16,13 @@ class Square:
       
   @size.setter
   def size(self, value):
+<<<<<<< HEAD
     
     self.__size = int(value) 
      
+=======
+    self.__size = int(value)  
+>>>>>>> a8a2011b731c7ee98d5a34c4acd281aae58e8756
     
   def area(self):
     sq = int(self.__size) * int(self.__size)
