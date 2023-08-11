@@ -1,3 +1,4 @@
+"""This is a square module"""
 class Square:
   """This class represents a square"""
   def __init__(self, size):
