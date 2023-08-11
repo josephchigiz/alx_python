@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 class Square:
   """This is the size class"""
   def __size(self):
