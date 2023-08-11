@@ -2,6 +2,10 @@
 
 class Square:
   """This is the size class"""
-  def __size(self):
+  def __size(self, size=0):
     """This is the size module"""
-    return __size()
+    self.size = size
+
+def main()
+
+main()
