@@ -1,10 +1,17 @@
 #!/usr/bin/python3
-Square = __import__('3-square').Square
+Square = __import__('4-square').Square
 
-try:
-    my_square = Square(89)
-    print(my_square.size)
-    my_square.size = "89"
-    print(my_square.size)
-except Exception as e:
-    print(e)
+my_square = Square(3)
+my_square.my_print()
+
+print("--")
+
+my_square.size = 10
+my_square.my_print()
+
+print("--")
+
+my_square.size = 0
+my_square.my_print()
+
+print("--")
