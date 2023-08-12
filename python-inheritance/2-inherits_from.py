@@ -11,7 +11,3 @@ def inherits_from(obj, a_class):
         or some_class == a_class
         or issubclass(some_class, a_class) == True
     )
-
-
-a = [1, 2, 3]
-print(inherits_from(a, list))
