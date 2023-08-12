@@ -26,3 +26,7 @@ class Rectangle(BaseGeometry):
 
         self.integer_validator(name="width", value=self.__width)
         self.integer_validator(name="height", value=self.__height)
+
+
+def main():
+    main()
