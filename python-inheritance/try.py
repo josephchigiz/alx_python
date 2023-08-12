@@ -1,19 +1,5 @@
-class Base:
-    """My base class"""
+#!/usr/bin/python3
+is_same_class = __import__("0-is_same_class").is_same_class
 
-    __nb_instances = 0
-
-    def __init__(self):
-        Base.__nb_instances += 1
-        self.id = Base.__nb_instances
-
-
-class User(Base):
-    """My User class"""
-
-    pass
-
-
-b = Base()
-u = User()
-print(u.id)
+a = 1
+print(is_same_class(a, int))
