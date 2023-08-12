@@ -1,4 +1,4 @@
-"""Task 4"""
+"""Task 6"""
 
 
 class BaseGeometry:
@@ -7,7 +7,7 @@ class BaseGeometry:
     def area(self):
         raise Exception("area() is not implemented")
 
-    def integer_validator(self, name="", value=0):
+    def integer_validator(self, name, value):
         self.name = name
         self.value = value
 
@@ -26,7 +26,3 @@ class Rectangle(BaseGeometry):
 
         self.integer_validator(name="width", value=self.__width)
         self.integer_validator(name="height", value=self.__height)
-
-
-def main():
-    main()
