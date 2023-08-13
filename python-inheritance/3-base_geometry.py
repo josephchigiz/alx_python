@@ -1,7 +1,4 @@
 """Task 3"""
-from collections.abc import Iterable
-
-
 class BaseGeometry:
     """This is a BaseGeometry Class"""
     def __dir__(self) -> None:
