@@ -28,6 +28,16 @@ class BaseGeometry:
 class Rectangle(BaseGeometry):
     """Rectangle SubClass"""
 
+    def __dir__(self) -> None:
+        """This will control inherited attribute access"""
+        attributes = super().__dir__()
+        used_attr = []
+
+        for att in attributes:
+            if att != "__init_subclass__":
+                used_attr.append(att)
+        return used_attr
+
     def __init__(self, width, height):
         self.integer_validator("width", height)
         self.integer_validator("width", height)
