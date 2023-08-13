@@ -28,21 +28,21 @@ class BaseGeometry(metaclass=BaseGeometryMeta):
             raise ValueError("{} must be greater than 0".format(self.__name))
 
 
-class Rectangle:
-    """Rectangle SubClass"""
+# class Rectangle:
+#     """Rectangle SubClass"""
 
-    def __init__(self, width, height):
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
+#     def __init__(self, width, height):
+#         self.integer_validator("width", width)
+#         self.integer_validator("height", height)
+#         self.__width = width
+#         self.__height = height
 
-    def __str__(self):
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+#     def __str__(self):
+#         return "[Rectangle] {}/{}".format(self.__width, self.__height)
 
-    def area(self):
-        area_rect = int(self.__width) * int(self.__height)
-        return area_rect
+#     def area(self):
+#         area_rect = int(self.__width) * int(self.__height)
+#         return area_rect
 
 
 class Square(Rectangle):
