@@ -13,10 +13,3 @@ class BaseGeometry:
             if att != "__init_subclass__":
                 used_attr.append(att)
         return used_attr
-
-
-def main():
-    print(dir(BaseGeometry))
-
-
-main()
