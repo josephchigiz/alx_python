@@ -1,6 +1,4 @@
-"""This is task 3"""
-
-
+#!/usr/bin/Python3
 class BaseGeometry:
     """An empty class called BaseGeometry"""
 
