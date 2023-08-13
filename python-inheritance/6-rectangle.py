@@ -11,7 +11,7 @@ class BaseGeometryMeta(type):
         return used_attr
 
 
-class BaseGeometry:
+class BaseGeometry(metaclass=BaseGeometryMeta):
     """BaseGeometry Class"""
 
     def area(self):
