@@ -1,4 +1,5 @@
 """Task 6"""
+Rectangle = __import__("7-rectangle").Rectangle
 
 
 class BaseGeometryMeta(type):
@@ -23,20 +24,20 @@ class BaseGeometry(metaclass=BaseGeometryMeta):
             raise ValueError("{} must be greater than 0".format(name))
 
 
-class Rectangle(BaseGeometry):
-    """Rectangle SubClass"""
+# class Rectangle(BaseGeometry):
+#     """Rectangle SubClass"""
 
-    def __init__(self, width, height):
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
+#     def __init__(self, width, height):
+#         self.integer_validator("width", width)
+#         self.integer_validator("height", height)
+#         self.__width = width
+#         self.__height = height
 
-    def __str__(self):
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+#     def __str__(self):
+#         return "[Rectangle] {}/{}".format(self.__width, self.__height)
 
-    def area(self):
-        return self.__width * self.__height
+#     def area(self):
+#         return self.__width * self.__height
 
 
 class Square(Rectangle):
