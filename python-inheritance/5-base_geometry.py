@@ -14,7 +14,7 @@ class BaseGeometry:
 
         if not type(value) is int:
             raise TypeError("{} must be an integer".format(self.__name))
-        elif self.value <= 0:
+        elif self.__value <= 0:
             raise ValueError("{} must be greater than 0".format(self.__name))
 
     def __dir__(self) -> None:
