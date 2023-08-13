@@ -67,13 +67,3 @@ class Square(Rectangle):
             if att != "__init_subclass__":
                 used_attr.append(att)
         return used_attr
-
-
-def main():
-    s = Square(13)
-
-    print(s)
-    print(s.area())
-
-
-main()
