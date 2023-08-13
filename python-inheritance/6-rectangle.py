@@ -37,10 +37,10 @@ class Rectangle(BaseGeometry):
     """Rectangle SubClass"""
 
     def __init__(self, width, height):
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
+        # self.integer_validator("width", width)
+        # self.integer_validator("height", height)
+        self.__width = super().integer_validator("width", width)
+        self.__height = super().integer_validator("height", height)
 
     def __dir__(self) -> None:
         """This will control inherited attribute access"""
