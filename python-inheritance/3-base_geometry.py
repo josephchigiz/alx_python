@@ -4,7 +4,7 @@
 class BaseGeometry:
     """This is a BaseGeometry Class"""
 
-    def __dir__(self) -> None:
+    def __dir__(self):
         """This will control inherited attribute access"""
         attributes = super().__dir__()
         used_attr = [att for att in attributes if att != "__init_subclass__"]
