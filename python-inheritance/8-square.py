@@ -28,7 +28,7 @@ class BaseGeometry(metaclass=BaseGeometryMeta):
             raise ValueError("{} must be greater than 0".format(self.__name))
 
 
-class Rectangle(BaseGeometry):
+class Rectangle:
     """Rectangle SubClass"""
 
     def __init__(self, width, height):
