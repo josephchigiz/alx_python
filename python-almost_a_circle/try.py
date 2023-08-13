@@ -2,12 +2,12 @@
 """ Check """
 from models.square import Square
 
-s = Square(12)
-if s is None:
+sq = Square(12)
+if sq is None:
     print("Can't create Square")
     exit(1)
 
-for attribute in list(s.__dict__.keys()):
+for attribute in list(sq.__dict__.keys()):
     if "size" in attribute:
         print(
             "You are not allowed to add any new attribute for size: {}".format(
@@ -16,15 +16,14 @@ for attribute in list(s.__dict__.keys()):
         )
         exit(1)
 
-# if s.size != 12:
-#     print("Wrong size getter: {}".format(s.size))
-#     exit(1)
-
-s.size = 5
-
-if s.size != 5:
-    print("OK", end="")
-    # print("Wrong size getter: {}".format(s.size))
+if sq.size != 12:
+    print("Wrong size getter: {}".format(sq.size))
     exit(1)
 
-# print("OK", end="")
+sq.size = 5
+
+if sq.size != 5:
+    print("Wrong size getter: {}".format(sq.size))
+    exit(1)
+
+print("OK", end="")
