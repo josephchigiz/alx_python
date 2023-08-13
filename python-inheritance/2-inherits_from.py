@@ -6,8 +6,4 @@ def inherits_from(obj, a_class):
     instance of a class that inherited from, the specified class"""
     some_class = type(obj)
 
-    return (
-        isinstance(obj, a_class)
-        or some_class == a_class
-        or issubclass(some_class, a_class) == True
-    )
+    return issubclass(some_class, a_class) and some_class is not a_class
