@@ -1,6 +1,4 @@
 """Task 4"""
-
-
 class BaseGeometry:
     """BaseGeometry Class"""
 
