@@ -26,7 +26,7 @@ class Square(Rectangle):
 
         if value < 0:
             raise ValueError("size must be >= 0")
-        self.__width = value
+        self.width = value
         self.height = value
 
     """To override __str__ method"""
