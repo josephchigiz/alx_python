@@ -49,23 +49,22 @@ class Rectangle(BaseGeometry):
         area_rect = int(self.__width) * int(self.__height)
         return area_rect
 
-    def __dir__(self) -> None:
-        """This will control inherited attribute access"""
-        attributes = super().__dir__()
-        used_attr = [att for att in attributes if att != "__init_subclass__"]
-        return used_attr
+    # def __dir__(self) -> None:
+    #     """This will control inherited attribute access"""
+    #     attributes = super().__dir__()
+    #     used_attr = [att for att in attributes if att != "__init_subclass__"]
+    #     return used_attr
 
 
 class Square(Rectangle):
     """Square Class"""
 
     def __init__(self, size):
-        self.integer_validator("size", size)
-        self.__size = size
+        self.__size = self.integer_validator("size", size)
         super().__init__(size, size)
 
-    def __dir__(self) -> None:
-        """This will control inherited attribute access"""
-        attributes = super().__dir__()
-        used_attr = [att for att in attributes if att != "__init_subclass__"]
-        return used_attr
+    # def __dir__(self) -> None:
+    #     """This will control inherited attribute access"""
+    #     attributes = super().__dir__()
+    #     used_attr = [att for att in attributes if att != "__init_subclass__"]
+    #     return used_attr
