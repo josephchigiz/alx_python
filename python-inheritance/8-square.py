@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Task 6"""
+Rectangle = __import__("7-rectangle").Rectangle
 
 
 class BaseGeometryMeta(type):
@@ -26,12 +27,6 @@ class BaseGeometry(metaclass=BaseGeometryMeta):
         if self.__value <= 0:
             raise ValueError("{} must be greater than 0".format(self.__name))
 
-    def __dir__(self) -> None:
-        """This will control inherited attribute access"""
-        attributes = super().__dir__()
-        used_attr = [att for att in attributes if att != "__init_subclass__"]
-        return used_attr
-
 
 class Rectangle(BaseGeometry):
     """Rectangle SubClass"""
@@ -49,12 +44,6 @@ class Rectangle(BaseGeometry):
         area_rect = int(self.__width) * int(self.__height)
         return area_rect
 
-    # def __dir__(self) -> None:
-    #     """This will control inherited attribute access"""
-    #     attributes = super().__dir__()
-    #     used_attr = [att for att in attributes if att != "__init_subclass__"]
-    #     return used_attr
-
 
 class Square(Rectangle):
     """Square Class"""
@@ -62,9 +51,3 @@ class Square(Rectangle):
     def __init__(self, size):
         self.__size = self.integer_validator("size", size)
         super().__init__(size, size)
-
-    # def __dir__(self) -> None:
-    #     """This will control inherited attribute access"""
-    #     attributes = super().__dir__()
-    #     used_attr = [att for att in attributes if att != "__init_subclass__"]
-    #     return used_attr
