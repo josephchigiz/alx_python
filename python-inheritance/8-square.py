@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Task 7"""
+"""Task 6"""
 
 
 class BaseGeometry:
@@ -50,3 +50,30 @@ class Rectangle(BaseGeometry):
             if att != "__init_subclass__":
                 used_attr.append(att)
         return used_attr
+
+
+class Square(Rectangle):
+    def __init__(self, size):
+        self.integer_validator("size", size)
+        self.__size = size
+        super().__init__(size, size)
+
+    def __dir__(self) -> None:
+        """This will control inherited attribute access"""
+        attributes = super().__dir__()
+        used_attr = []
+
+        for att in attributes:
+            if att != "__init_subclass__":
+                used_attr.append(att)
+        return used_attr
+
+
+def main():
+    s = Square(13)
+
+    print(s)
+    print(s.area())
+
+
+main()
