@@ -8,14 +8,14 @@ class BaseGeometry:
     def area(self):
         raise Exception("area() is not implemented")
 
-    def integer_validator(self, name="", value=0):
-        self.__name = name
-        self.__value = value
+    def integer_validator(self, name, value):
+        # self.__name = name
+        # self.__value = value
 
         if not type(value) is int:
-            raise TypeError("{} must be an integer".format(self.__name))
+            raise TypeError("{name} must be an integer")
         elif self.__value <= 0:
-            raise ValueError("{} must be greater than 0".format(self.__name))
+            raise ValueError("{name} must be greater than 0")
 
     def __dir__(self) -> None:
         """This will control inherited attribute access"""
