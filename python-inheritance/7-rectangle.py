@@ -50,13 +50,3 @@ class Rectangle(BaseGeometry):
             if att != "__init_subclass__":
                 used_attr.append(att)
         return used_attr
-
-
-def main():
-    r = Rectangle(3, 5)
-
-    print(r)
-    print(r.area())
-
-
-main()
