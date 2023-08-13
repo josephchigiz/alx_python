@@ -4,4 +4,5 @@
 class BaseGeometry:
     """An empty class called BaseGeometry"""
 
-    pass
+    def __init__(self):
+        pass
