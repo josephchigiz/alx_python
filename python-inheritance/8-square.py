@@ -2,7 +2,16 @@
 """Task 6"""
 
 
-class BaseGeometry:
+class BaseGeometryMeta(type):
+    """Meta Class for BAseGeometry"""
+
+    def __dir__(self):
+        attributes = super().__dir__()
+        used_attr = [att for att in attributes if att != "__init_subclass__"]
+        return used_attr
+
+
+class BaseGeometry(metaclass=BaseGeometryMeta):
     """BaseGeometry Class"""
 
     def area(self):
@@ -20,11 +29,7 @@ class BaseGeometry:
     def __dir__(self) -> None:
         """This will control inherited attribute access"""
         attributes = super().__dir__()
-        used_attr = []
-
-        for att in attributes:
-            if att != "__init_subclass__":
-                used_attr.append(att)
+        used_attr = [att for att in attributes if att != "__init_subclass__"]
         return used_attr
 
 
@@ -47,11 +52,7 @@ class Rectangle(BaseGeometry):
     def __dir__(self) -> None:
         """This will control inherited attribute access"""
         attributes = super().__dir__()
-        used_attr = []
-
-        for att in attributes:
-            if att != "__init_subclass__":
-                used_attr.append(att)
+        used_attr = [att for att in attributes if att != "__init_subclass__"]
         return used_attr
 
 
@@ -66,9 +67,5 @@ class Square(Rectangle):
     def __dir__(self) -> None:
         """This will control inherited attribute access"""
         attributes = super().__dir__()
-        used_attr = []
-
-        for att in attributes:
-            if att != "__init_subclass__":
-                used_attr.append(att)
+        used_attr = [att for att in attributes if att != "__init_subclass__"]
         return used_attr
