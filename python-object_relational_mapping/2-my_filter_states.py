@@ -14,7 +14,9 @@ def states_list(username, password, db_name, new_state):
 
         cur = dabase.cursor()
 
-        list = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+        list = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(
+            new_state
+        )
 
         cur.execute(list, (new_state,))
 
@@ -34,4 +36,4 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
-    states_list(username, password, db_name)
+    states_list(username, password, db_name, new_state)
