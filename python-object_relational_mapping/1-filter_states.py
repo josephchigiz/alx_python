@@ -14,7 +14,7 @@ def states_list(username, password, db_name):
 
         cur = dabase.cursor()
 
-        list = "SELECT * FROM states WHERE name REGEXP BINARY '[A-Z]' ORDER BY id ASC"
+        list = "SELECT * FROM states WHERE name LIKE 'N%' COLLATE utf8mb4_bin ORDER BY id ASC"
 
         cur.execute(list)
 
