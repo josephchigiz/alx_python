@@ -14,7 +14,7 @@ def states_list(username, password, db_name):
 
         cur = dabase.cursor()
 
-        list = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
+        list = "SELECT * FROM states WHERE name LIKE 'N%' COLLATE ORDER BY id ASC"
 
         cur.execute(list)
 
