@@ -1,0 +1,1 @@
+list = "SELECT * FROM states WHERE name = '{}' AND name LIKE 'N%' COLLATE utf8mb4_bin".format(new_state_safe)
