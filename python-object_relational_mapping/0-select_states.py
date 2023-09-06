@@ -8,7 +8,7 @@ def states_list(username, password, db_name):
             port="3306",
             user="root",
             passwd="root",
-            db="hbtn_0e_0_usa",
+            db="test_0",
         )
 
         cur = dabase.cursor()
