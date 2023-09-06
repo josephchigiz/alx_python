@@ -1,32 +1,30 @@
 import MySQLdb as DB
 
+try:
+    dabase = DB.connect(
+        host="localhost",
+        port="3306",
+        user="root",
+        passwd="root",
+        db="test_0",
+    )
 
-def states_list(username, password, db_name):
-    try:
-        dabase = DB.connect(
-            host="localhost",
-            port="3306",
-            user="root",
-            passwd="root",
-            db="test_0",
-        )
+    cur = dabase.cursor()
 
-        cur = dabase.cursor()
+    list = "SELECT * FROM states ORDER BY id ASC"
 
-        list = "SELECT * FROM states ORDER BY id ASC"
+    cur.execute(list)
 
-        cur.execute(list)
+    states = cur.fetchall()
 
-        states = cur.fetchall()
+    for state in states:
+        print(state)
 
-        for state in states:
-            print(state)
-
-    except DB.Error:
-        print()
-    finally:
-        cur.close()
-        dabase.close()
+except DB.Error:
+    print()
+finally:
+    cur.close()
+    dabase.close()
 
 
 # username = root
