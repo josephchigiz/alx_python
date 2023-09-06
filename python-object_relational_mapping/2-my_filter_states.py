@@ -18,7 +18,7 @@ def states_list(username, password, db_name, new_state):
             new_state
         )
 
-        cur.execute(list, (new_state,))
+        cur.execute(list)
 
         states = cur.fetchall()
 
