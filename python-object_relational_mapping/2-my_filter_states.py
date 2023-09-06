@@ -14,7 +14,7 @@ def states_list(username, password, db_name, new_state):
 
         cur = dabase.cursor()
 
-        list = "SELECT * FROM states WHERE name = '{}' AND name LIKE 'N%' COLLATE utf8mb4_bin ORDER BY id ASC".format(
+        list = "SELECT * FROM states WHERE name = '{}' AND name LIKE 'N%' COLLATE utf8mb4_bin".format(
             new_state
         )
 
