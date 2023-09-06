@@ -2,7 +2,7 @@ import MySQLdb as DB
 import sys
 
 
-def states_list(username, password, db_name, new_state_safe):
+def cities_list(username, password, db_name):
     try:
         dabase = DB.connect(
             host="localhost",
@@ -14,14 +14,14 @@ def states_list(username, password, db_name, new_state_safe):
 
         cur = dabase.cursor()
 
-        list = "SELECT * FROM states WHERE name = '%s' AND name LIKE 'N%' COLLATE utf8mb4_bin"
+        list = "SELECT * FROM cities ORDER BY id ASC"
 
-        cur.execute(list, (new_state_safe,))
+        cur.execute(list)
 
-        states = cur.fetchall()
+        cities = cur.fetchall()
 
-        for state in states:
-            print(state)
+        for city in cities:
+            print(city)
 
     except DB.Error:
         print()
@@ -34,5 +34,4 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
-    new_state_safe = sys.argv[4]
-    states_list(username, password, db_name, new_state_safe)
+    cities_list(username, password, db_name)
