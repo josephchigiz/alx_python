@@ -15,7 +15,7 @@ def states_list(username, password, db_name, new_state_safe):
         cur = dabase.cursor()
 
         list = (
-            "SELECT * FROM states WHERE name = '%s' AND"
+            "SELECT * FROM states WHERE name = %s AND"
             "name LIKE 'N%' COLLATE utf8mb4_bin"
             )
 
