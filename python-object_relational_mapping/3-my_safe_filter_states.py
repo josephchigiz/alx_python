@@ -34,12 +34,8 @@ def states_list(username, password, db_name, new_safe_state):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        print("Usage: python script.py <username> "
-            "<password> <db_name> <new_state>")
-    else:
-        username = sys.argv[1]
-        password = sys.argv[2]
-        db_name = sys.argv[3]
-        new_safe_state = sys.argv[4]
-        states_list(username, password, db_name, new_safe_state)
+    username = sys.argv[1]
+    password = sys.argv[2]
+    db_name = sys.argv[3]
+    new_safe_state = sys.argv[4]
+    states_list(username, password, db_name, new_safe_state)
