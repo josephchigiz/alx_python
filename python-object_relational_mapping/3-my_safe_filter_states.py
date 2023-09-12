@@ -19,7 +19,7 @@ def states_list(username, password, db_name, new_safe_state):
             "OR name LIKE %s COLLATE utf8mb4_bin"
             )
 
-        cur.execute(list, (new_safe_state,new_safe_state + 'N%'))
+        cur.execute(list, (new_safe_state, new_safe_state + 'N%'))
 
         states = cur.fetchall()
 
