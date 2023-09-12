@@ -14,7 +14,11 @@ def cities_list(username, password, db_name):
 
         cur = dabase.cursor()
 
-        list = "SELECT * FROM cities"
+        list = (
+            "SELECT cities.id, cities.name, states.name "
+            "FROM cities "
+            "JOIN states ON cities.state_id = state_id"
+            )
 
         cur.execute(list)
 
