@@ -14,7 +14,7 @@ def cities_list(username, password, db_name):
 
         cur = dabase.cursor()
 
-        list = "SELECT * FROM cities ORDER BY state_id ASC"
+        list = "SELECT * FROM cities"
 
         cur.execute(list)
 
