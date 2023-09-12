@@ -14,12 +14,12 @@ def states_list(username, password, db_name, new_safe_state):
 
         cur = dabase.cursor()
 
-        query = (
+        list = (
             "SELECT * FROM states WHERE name = %s "
             "AND name LIKE 'N%' COLLATE utf8mb4_bin"
             )
 
-        cur.execute(query, (new_safe_state,))
+        cur.execute(list, (new_safe_state,))
 
         states = cur.fetchall()
 
@@ -27,7 +27,7 @@ def states_list(username, password, db_name, new_safe_state):
             print(state)
 
     except DB.Error:
-        print()
+        print("Error: ", DB.Error)
     finally:
         cur.close()
         dabase.close()
