@@ -14,12 +14,12 @@ def states_list(username, password, db_name, new_safe_state):
 
         cur = dabase.cursor()
 
-        list = (
+        query = (
             "SELECT * FROM states WHERE name = %s "
             "AND name LIKE 'N%' COLLATE utf8mb4_bin"
             )
 
-        cur.execute(list, (new_safe_state,))
+        cur.execute(query, (new_safe_state,))
 
         states = cur.fetchall()
 
