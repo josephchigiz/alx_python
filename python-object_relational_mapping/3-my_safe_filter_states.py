@@ -16,10 +16,11 @@ def states_list(username, password, db_name, new_safe_state):
 
         list = (
             "SELECT * FROM states WHERE name = %s "
-            "AND name LIKE 'N%' COLLATE utf8mb4_bin"
+            "AND name LIKE 'N%' COLLATE utf8mb4_bin", 
+            (new_safe_state,)
             )
 
-        cur.execute(list % (new_safe_state,))
+        cur.execute(list)
 
         states = cur.fetchall()
 
