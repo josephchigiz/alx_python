@@ -23,8 +23,8 @@ def cities_list(username, password, db_name):
         for city in cities:
             print(city)
 
-    except DB.Error:
-        print()
+    except DB.Error as err:
+        print("Error: ", err)
     finally:
         cur.close()
         dabase.close()
