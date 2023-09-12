@@ -15,8 +15,8 @@ def states_list(username, password, db_name, new_safe_state):
         cur = dabase.cursor()
 
         list = (
-            " SELECT * FROM states WHERE name = '%s' AND "
-            " name LIKE 'N%' COLLATE utf8mb4_bin"
+            "SELECT * FROM states WHERE name = %s "
+            "AND name LIKE 'N%' COLLATE utf8mb4_bin"
             )
 
         cur.execute(list, (new_safe_state,))
@@ -34,8 +34,11 @@ def states_list(username, password, db_name, new_safe_state):
 
 
 if __name__ == "__main__":
-    username = sys.argv[1]
-    password = sys.argv[2]
-    db_name = sys.argv[3]
-    new_safe_state = sys.argv[4]
-    states_list(username, password, db_name, new_safe_state)
+    if len(sys.argv) != 5:
+        print("Usage: python script.py <username> <password> <db_name> <new_state>")
+    else:
+        username = sys.argv[1]
+        password = sys.argv[2]
+        db_name = sys.argv[3]
+        new_safe_state = sys.argv[4]
+        states_list(username, password, db_name, new_safe_state)
