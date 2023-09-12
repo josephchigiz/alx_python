@@ -26,8 +26,8 @@ def states_list(username, password, db_name, new_safe_state):
         for state in states:
             print(state)
 
-    except DB.Error:
-        print("Error: ", DB.Error)
+    except DB.Error as err:
+        print("Error: ", err)
     finally:
         cur.close()
         dabase.close()
