@@ -16,7 +16,8 @@ def cities_list(username, password, db_name):
 
         list = (
             "SELECT DISTINCT cities.id, cities.name, states.name "
-            "FROM cities JOIN states ON cities.state_id = state_id"
+            "FROM cities "
+            "LEFT OUTER JOIN states ON cities.state_id = state_id"
             )
 
         cur.execute(list)
