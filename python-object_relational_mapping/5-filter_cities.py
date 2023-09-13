@@ -23,9 +23,9 @@ def cities_list(username, password, db_name, state_name):
         list = (
             "SELECT DISTINCT cities.name "
             "FROM cities ORDER BY id ASC "
-            "WHERE name = %s AND "
-            "WHERE cities.state_id = states.id"
-            # "JOIN states ON cities.state_id = states.id"
+            "WHERE states.name = %s "
+            # "WHERE cities.state_id = states.id"
+            "JOIN states ON cities.state_id = states.id"
             )
 
         cur.execute(list, (state_name,))
