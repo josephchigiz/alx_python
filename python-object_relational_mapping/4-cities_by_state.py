@@ -17,7 +17,7 @@ def cities_list(username, password, db_name):
         list = (
             "SELECT DISTINCT cities.id, cities.name, states.name "
             "FROM cities "
-            "JOIN states ON cities.state_id = state.id"
+            "JOIN states ON cities.state_id = states.id"
             )
 
         cur.execute(list)
