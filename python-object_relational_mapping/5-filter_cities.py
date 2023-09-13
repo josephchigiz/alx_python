@@ -28,7 +28,7 @@ def cities_list(username, password, db_name, state_name):
             # "JOIN states ON cities.state_id = states.id"
             )
 
-        cur.execute(list)
+        cur.execute(list, (state_name,))
 
         cities = cur.fetchall()
 
