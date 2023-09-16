@@ -33,7 +33,7 @@ def cities_list(username, password, db_name, state_name):
         cities = cur.fetchall()
 
         for city in cities:
-            print(city)
+            print(", ".join(city))
 
     except DB.Error as err:
         print("Error: ", err)
