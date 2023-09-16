@@ -21,7 +21,7 @@ def cities_list(username, password, db_name, state_name):
         #     )
 
         list = (
-            "SELECT DISTINCT cities.name "
+            "SELECT cities.name "
             "FROM cities  "
             "JOIN states ON cities.state_id = states.id "
             "WHERE states.name = %s "
