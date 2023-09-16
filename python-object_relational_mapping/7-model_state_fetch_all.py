@@ -1,10 +1,10 @@
 from sqlalchemy import create_engine
-from model_state import Base, State
+from model_state import State, Base
 from sqlalchemy.orm import sessionmaker
 import sys
 
 if __name__ == "__main__":
-    path = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
+    path = "mysql+mysqldb://{}:{}@localhost/{}".format(
         argv[1],
         argv[2],
         argv[3])
