@@ -7,9 +7,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 Base = declarative_base()
-    """
-    declarative class doctring
-    """
+"""declarative class doctring """
 
 class State(Base):
      """
