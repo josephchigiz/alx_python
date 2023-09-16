@@ -7,13 +7,14 @@ The declarative base.
 
 It is used as a parent class
 """
+
+
 class State(Base):
     """
-    Represents a state in the database.
-
+    Represents state table in the database
     Attributes:
-        id (int):
-        name (str): 
+    id(INT)
+    name(Str)
     """
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
