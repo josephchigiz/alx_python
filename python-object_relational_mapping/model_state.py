@@ -7,6 +7,12 @@ from sqlalchemy.orm import sessionmaker
 
 
 Base = declarative_base()
+"""
+Declarative base.
+
+Parent class for ORM classes to define database tables.
+"""
+
 
 class State(Base):
      """
@@ -19,14 +25,9 @@ class State(Base):
     __tablename__ = 'states'
 
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
-    """
-    this is a unique identifier for the state
-    """
 
     name = Column(String(128), nullable=False)
-    """
-    This is the name of the state
-    """
+
 
 username = 'root'
 password = 'root'
