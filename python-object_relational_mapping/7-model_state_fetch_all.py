@@ -1,10 +1,13 @@
-from sqlalchemy import create_engine, Column, String, Integer
+from sqlalchemy import create_engine
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
+import sys
 
-
-def states_list(username, password, port, db):
-    path = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(username, password, db)
+if __name__ == "__main__":
+    path = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
+        argv[1],
+        argv[2],
+        argv[3])
 
     engine = create_engine(path)
 
@@ -12,10 +15,8 @@ def states_list(username, password, port, db):
 
     Session = sessionmaker(bind=engine)
     session = Session()
-
-
-if __name__ == "__main__":
-    username = sys.argv[1]
-    password = sys.argv[2]
-    db = sys.argv[3]
-    states_list(username, password, db)
+    
+    state_list = session.query(State).order_by(State.id).all()
+    for state in state_list:
+        print("{}: {}".format(State.id, state.name))
+    session.close()
