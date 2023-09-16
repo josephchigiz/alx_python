@@ -11,10 +11,10 @@ if __name__ == "__main__":
 
     engine = create_engine(path)
 
-    Base.metadata.create_all(engine)
-
     Session = sessionmaker(bind=engine)
     session = Session()
+    Base.metadata.create_all(engine)
+
 
     state_list = session.query(State).order_by(State.id).all()
     for state in state_list:
