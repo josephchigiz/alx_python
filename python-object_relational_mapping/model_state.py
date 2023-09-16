@@ -2,7 +2,7 @@ import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, INT, autoincrement
-
+from sqlalchemy.orm import sessionmaker
 
 username = 'root'
 password = 'root'
@@ -15,13 +15,12 @@ dabase = create_engine(path)
 
 Base = declarative_base
 
-
-def State(Base):
+class State(object):
+     """docstring for State"""
     __tablename__ = 'states'
 
     id = Column(Integer, autoincrement=True, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
 
-    def __init__(self, name):
-        self.name = name 
+        
 
