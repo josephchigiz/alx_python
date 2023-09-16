@@ -1,8 +1,8 @@
-"""Model State Script"""
-import sqlalchemy
-from sqlalchemy import create_engine
+"""
+Model State Script
+"""
+from sqlalchemy import create_engine, Column, Integer, String, INT, autoincrement
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String, INT, autoincrement
 from sqlalchemy.orm import sessionmaker
 
 
@@ -14,7 +14,7 @@ Parent class for ORM classes to define database tables.
 """
 
 
-class State(Base):
+class States(Base):
      """
     Represents a state in the database.
 
