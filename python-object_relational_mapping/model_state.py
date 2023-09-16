@@ -6,15 +6,25 @@ from sqlalchemy.orm import sessionmaker
 
 
 Base = declarative_base()
-    """declarative class doctring"""
+    """
+    declarative class doctring
+    """
 
 class State(Base):
-     """docstring for State"""
+     """
+     docstring for State
+     """
     __tablename__ = 'states'
 
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
-    name = Column(String(128), nullable=False)
+    """
+    this is a unique identifier for the state
+    """
 
+    name = Column(String(128), nullable=False)
+    """
+    This is the name of the state
+    """
 
 username = 'root'
 password = 'root'
