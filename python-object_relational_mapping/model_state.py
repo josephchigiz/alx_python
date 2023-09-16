@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 Base = declarative_base()
-"""docstring for declarative class"""
+    """declarative class doctring"""
 
 class State(Base):
      """docstring for State"""
