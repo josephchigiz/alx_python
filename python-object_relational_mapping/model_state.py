@@ -5,7 +5,7 @@ Base = declarative_base()
 """
 The declarative base.
 
-It is used as a parent class for SQLAlchemy ORM classes to define database tables.
+It is used as a parent class
 """
 class State(Base):
     """
