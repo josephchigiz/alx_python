@@ -20,9 +20,6 @@ if __name__ == "__main__":
 
     state_list = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
 
-    if state_list:
-        for state in state_list:
-            print("{}: {}".format(state.id, state.name))
-    else:
-        print("Nothing")
+    for state in state_list:
+        print("{}: {}".format(state.id, state.name))
     session.close()
