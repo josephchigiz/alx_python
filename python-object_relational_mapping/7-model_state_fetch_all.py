@@ -1,7 +1,7 @@
 from model_state import State, Base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from sys import argv
+import sys
 
 if __name__ == "__main__":
     # path = "mysql+mysqldb://{}:{}@localhost/{}".format(
