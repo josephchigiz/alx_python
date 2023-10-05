@@ -1,13 +1,19 @@
 # Basic flask app
-
 from flask import Flask
+
+"""
+    The module imported handles all the framework's operations, 
+    from routing to connecting temps.
+"""
 
 app = Flask(__name__)
 
 
 @app.route("/", strict_slashes=False)
 def index():
-    # This is the default route
+    """
+    This is the default route
+    """
     return "Hello HBNB!"
 
 
