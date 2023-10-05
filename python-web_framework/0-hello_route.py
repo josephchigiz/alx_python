@@ -1,12 +1,11 @@
-# Basic flask app
+"""Basic flask app"""
 from flask import Flask
 
-"""
-    The module imported handles all the framework's operations, 
-    from routing to connecting temps.
-"""
+"""The module imported handles all the framework's operations, from routing to connecting temps."""
 
 app = Flask(__name__)
+
+"""Routing"""
 
 
 @app.route("/", strict_slashes=False)
