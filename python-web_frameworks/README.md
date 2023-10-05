@@ -3,6 +3,7 @@
 This README provides an overview of the basics of Flask, a micro web framework for Python, based on code and notes from a learning session.
 
 ## What is Flask?
+<center><img src="flask.jpg" width="300"></center>
 Flask is a lightweight web framework for Python, known for its simplicity and flexibility.  
 It allows you to quickly build web applications with minimal boilerplate code.
 
