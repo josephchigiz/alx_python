@@ -33,6 +33,7 @@ def c_text(text):
     return f"C {text_spaces}"
 
 
+@app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
 def py_text(text="is cool"):
     """
