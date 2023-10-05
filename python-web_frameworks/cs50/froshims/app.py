@@ -1,6 +1,9 @@
+import MySQLdb as DBase
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
+
+db = "mysql:///froshims.db"
 
 MEMBERS = {}
 SPORTS = ["Basketball", "Soccer", "Ultimate Frisbee"]
@@ -21,6 +24,12 @@ def register():
         return render_template("failure.html")
     MEMBERS[name] = sport
     return render_template("register.html", you=request.form.get("name", "Student."))
+
+    # remember members
+    db.execute("INSERT INTO members (name, sport) VALUES(%s, %s)", name, sport)
+
+    # confirm registration
+    return redirect("/members")
 
 
 @app.route("/members")
