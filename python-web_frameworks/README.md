@@ -161,4 +161,4 @@ app.logger.error('An error occurred')
 ## Conclusion
 This README covers the basics of Flask, including routing, variable rules, URL building, HTTP methods, static files, rendering templates, sessions, and logging. Flask's simplicity and flexibility make it an excellent choice for web development projects. Explore the official Flask documentation for more advanced features and techniques.
 
-**Happy Coding Mates** 🫡
+**Happy Coding Mates!** 🫡
