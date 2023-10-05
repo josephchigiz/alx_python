@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/ochego/Documents/ALX/ClassProjects/alx_python/python-web_frameworks/vweb"
+set -gx VIRTUAL_ENV "/home/ochego/Documents/ALX/ClassProjects/alx_python/python-web_framework/vweb"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

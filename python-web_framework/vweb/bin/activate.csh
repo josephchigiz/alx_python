@@ -8,7 +8,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/home/ochego/Documents/ALX/ClassProjects/alx_python/python-web_frameworks/vweb"
+setenv VIRTUAL_ENV "/home/ochego/Documents/ALX/ClassProjects/alx_python/python-web_framework/vweb"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"

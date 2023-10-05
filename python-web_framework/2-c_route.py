@@ -29,7 +29,7 @@ def cText():
     """
     This is the /c route
     """
-    return "C {text.replace('_', ' ')}"
+    return f"C {text.replace('_', ' ')}"
 
 
 if __name__ == "__main__":
