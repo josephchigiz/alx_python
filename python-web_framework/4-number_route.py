@@ -49,7 +49,7 @@ def n_int(n=0):
     """
     This is the /number route
     """
-    return f"{n} is an number"
+    return f"{n} is a number"
     # try:
     #     n = int(n)
     #     return f"{n} is an number"
