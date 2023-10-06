@@ -44,16 +44,17 @@ def py_text(text="is cool"):
 
 
 @app.route("/number", strict_slashes=False)
-@app.route("/number/<n>", strict_slashes=False)
-def n_int(n):
+@app.route("/number/<int:n>", strict_slashes=False)
+def n_int(n=0):
     """
     This is the /number route
     """
-    try:
-        n = int(n)
-        return f"{n} is an number"
-    except ValueError:
-        return f"{n} is not a valid number"
+    return f"{n} is an number"
+    # try:
+    #     n = int(n)
+    #     return f"{n} is an number"
+    # except ValueError:
+    #     return f"{n} is not a valid number"
 
 
 if __name__ == "__main__":
