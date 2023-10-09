@@ -51,13 +51,12 @@ def n_int(n):
     return f"{n} is a number"
 
 
-@app.route("/number_template/<n>", strict_slashes=False)
+@app.route("/number_template/<int:n>", strict_slashes=False)
 def number_template(n):
     """
     This will route to the number_temp which will be displayed
     """
-    n = int(n)
-    return render_template("5-number_template.py", number=n)
+    return render_template("5-number.html", number=n)
 
 
 if __name__ == "__main__":
