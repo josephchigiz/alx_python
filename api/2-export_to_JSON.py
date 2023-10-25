@@ -1,5 +1,5 @@
-import requests
 import json
+import requests
 all_tasks = {}
 for user_id in range(1, 11):
     request = requests.get(f'https://jsonplaceholder.typicode.com/users/{user_id}/todos')
