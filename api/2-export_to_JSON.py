@@ -3,7 +3,7 @@ import json
 import requests
 import sys
 
-
+"""check for user ID from command given"""
 user_id = str(sys.argv[1])
 """
 initialize empty dict
