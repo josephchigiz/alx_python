@@ -2,7 +2,7 @@ import csv
 import requests
 import sys
 
-id = sys.argv[1]
+id = str(sys.argv[1])
 
 request_user = requests.get('https://jsonplaceholder.typicode.com/users/'+id)
 request_todos = requests.get('https://jsonplaceholder.typicode.com/users/'+id+'/todos')
@@ -28,6 +28,6 @@ for item in data_todos:
 csv_file_name = f'{id}.csv'
 
 with open(csv_file_name, mode='w', newline='') as file:
-    csv_writer = csv_writer(file)
+    csv_writer = csv.writer(file)
     csv_writer.writerow(["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK TITLE"])
     csv_writer.writerows(tasks_data)

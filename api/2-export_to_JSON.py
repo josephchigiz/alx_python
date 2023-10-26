@@ -4,7 +4,7 @@ import requests
 import sys
 
 
-user_id = sys.argv[1]
+user_id = str(sys.argv[1])
 """
 initialize empty dict
 """
@@ -33,7 +33,7 @@ for user_id in range(1, 11):
     all_tasks[str(user_id)] = tasks
 
 """JSON file name"""
-json_file = "{}.json".format(user_id)
+json_file = f'{user_id}.json'
 
 """open JSON file for writing"""
 with open(json_file, mode='w') as file:
