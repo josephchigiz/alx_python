@@ -43,7 +43,7 @@ import csv
 import requests
 import sys
 
-user_id = str(sys.argv[1])
+user_id = sys.argv[1]
 
 user_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(user_id)
 todo_url = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(user_id)
