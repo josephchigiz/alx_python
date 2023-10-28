@@ -1,75 +1,21 @@
-# import csv
-# import requests
-# import sys
-
-# id = str(sys.argv[1])
-
-# request_user = requests.get('https://jsonplaceholder.typicode.com/users/'+id)
-# request_todos = requests.get('https://jsonplaceholder.typicode.com/users/'+id+'/todos')
-
-# data_user = request_user.json()
-# data_todos = request_todos.json()
-
-# completed = 0
-
-# tasks_data = []
-
-# for i in data_todos:
-#     if i.get('completed')==True:
-#         completed = completed + 1
-#     tasks_data.append([id, data_user.get('name'), i.get('completed'), i.get('title')])
-
-# print ('Employee {} is done with tasks({}/{}):'.format(data_user.get('name'), completed,len(data_todos)))
-
-# for item in data_todos:
-#     if item.get('completed') == True:
-#         print('\t ' + item.get('title'))
-
-# csv_file_name = f'{id}.csv'
-
-# with open(csv_file_name, mode='w', newline='') as file:
-#     csv_writer = csv.writer(file)
-#     csv_writer.writerow(["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"])
-#     csv_writer.writerows(tasks_data)
-
+#!/usr/bin/python3
 import csv
 import requests
 import sys
 
-id = sys.argv[1]
+user_id = str(sys.argv[1])
 
-request_user = requests.get("https://jsonplaceholder.typicode.com/users/" + id)
-request_todos = requests.get(
-    "https://jsonplaceholder.typicode.com/users/" + id + "/todos"
-)
+request_user = "https://jsonplaceholder.typicode.com/users/{}".format(user_id)
+request_todos = "https://jsonplaceholder.typicode.com/users/{}/todos".format(user_id)
 
-data_user = request_user.json()
-data_todos = request_todos.json()
+data_user = requests.get(request_user).json()
+data_todos = requests.get(request_todos).json()
 
-completed = 0
+filename = f"{user_id}.csv"
 
-tasks_data = []
-
-for i in data_todos:
-    if i.get("completed") == True:
-        completed = completed + 1
-    tasks_data.append(
-        [id, data_user.get("username"), i.get("completed"), i.get("title")]
-    )
-
-print(
-    "Employee {} is done with tasks({}/{}):".format(
-        data_user.get("name"), completed, len(data_todos)
-    )
-)
-
-for item in data_todos:
-    if item.get("completed") == True:
-        print("\t " + item.get("title"))
-
-file_name = f"{id}.csv"
-
-with open(file_name, "w") as csvfile:
-    csvwriter = csv.writer(csvfile)
-    csvwriter.writerow(["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"])
-    csvwriter.writerows(tasks_data)
+with open(filename, "w", newline="") as file:
+    csvwriter = csv.writer(file, quoting=csv.QUOTE_ALL)
+    for task in data_todos:
+        csvwriter.writerow(
+            [user_id, str(data_user["username"]), task["completed"], task["title"]]
+        )
